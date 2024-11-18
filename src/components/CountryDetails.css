@@ -1,0 +1,140 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.back-button{
+  padding: .6em 0;
+  /* border: 1px solid black; */
+  margin-bottom: 1.5em;
+}
+
+.back-button button{
+  background-color: #f9f9f9;
+  padding:0 1em;
+  border: none;
+  /* border-radius: 5px; */
+  outline: none;
+  transition: all .2s;
+  font-size: large;
+  font-family: "Poppins", serif;
+}
+
+.back-button button:hover{
+  /* background-color: #e1d8c3; */
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+  cursor: pointer;
+}
+
+.country-details-container{
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 3em;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+} 
+
+.country-details{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 5em;
+}
+
+.country-image img{
+  width: 30em;  
+}
+
+.country-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.country-text h1{
+  font-family: "Merriweather", serif;
+}
+
+.details-text{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  justify-content: center;
+  font-family: "Poppins", serif;
+  font-size: 1.2em;
+}
+
+p span {
+  font-family: "Merriweather", serif;
+  background-color: #e1d8c3;
+  color: black;
+  margin-right: 4px;
+  padding: 2px 7px;
+  border-radius: 30px;
+  font-size: .9em;
+}
+
+@media (max-width: 1400px){
+  .country-details{
+    justify-content: center;
+    gap: 9em;
+  }
+}
+
+@media (max-width: 1200px){
+  .country-image img {
+    width: 25em;
+    height: 16em;
+  }
+  .country-text h1{
+    font-size: 1.7em;
+  }
+
+  .details-text{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 950px){
+  .country-details{
+    gap: 5em;
+  }
+}
+
+@media (max-width: 900px){
+  .country-details-container {
+    margin-top: 1em;
+  }
+
+  .country-details{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px){
+  .country-details{
+    padding: 1em;
+    gap: 2em;
+    margin-bottom: 1em;
+    align-items: center;
+  }
+
+  .country-text{
+    gap: .5em;
+  }
+
+  .country-image img {
+    width: 20em;
+    height: 13em;
+  }
+}
+
+@media (max-width: 360px){
+  .country-image img {
+    width: 18em;
+    height: 11em;
+  }
+}

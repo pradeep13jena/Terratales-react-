@@ -1,0 +1,228 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Basic styling */
+  padding: 10px;
+  font-size: 16px;
+  padding-right: 10px; /* Space for the arrow */
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #f9f9f9;
+}
+
+.header{
+  background-color: #e1d8c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7em 4em;
+}
+
+.logo img{
+  width: 200px;
+}
+
+.toggle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+}
+
+.toggleText{
+  font-size: 1.7em;
+  font-family: "Merriweather", serif;
+  /* border: 1px solid black; */
+  padding: 5px 12px;
+  transition: all .2s;
+  border-radius: 50%;
+}
+
+.toggleText:hover{
+  cursor: pointer;
+}
+
+.toggleText:hover{
+  border-radius: 50%;
+  transform: scale(1.1);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  cursor: pointer;
+}
+
+.filterContainer {
+  position: relative;
+  display: inline-block;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+/* Custom arrow styling */
+.filterContainer::after {
+  content: '▼'; 
+  font-size: 15px;
+  color: #333;
+  position: absolute;
+  right: 10px; /* Adjust to position arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows click-through to select */
+  
+  /* Padding around the arrow */
+  padding: 0px; /* Adjust as needed */
+}
+
+
+#continent{
+  font-size: 1em;
+  padding: 8px 2px 8px 8px;
+  background-color: transparent;
+  font-family: "Poppins", serif;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* SearchBar & FilterBox */
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  padding: 3em 4.5em;
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  background-color: #f9f9f9;
+}
+
+.searchContainer{
+  /* border: 1px solid black; */
+  padding: .2em 1em;
+  font-size: medium;
+  border-radius: 6px;
+  font-family: "Poppins", serif;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.magnifyingGlass{
+  font-size: large;
+  margin-right: .1em;
+}
+
+#countrySearch{
+  height: 2em;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2em;
+}
+
+/* Country Card */
+
+.countryList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: .7em 3em;
+  gap: 6em;
+}
+.countryCard{
+  text-decoration: none;
+  font-family: "Poppins", serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  /* border: 1px solid black; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: all .2s;
+}
+
+.countryCard:hover{
+  transform: scale(1.1);
+}
+
+.cardText{
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px;
+  gap: .6em;
+}
+.cardTextH3{
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
+}
+
+.flagClass{
+  width: 270px;
+  height: 180px;
+  /* border-radius: 8px; */
+}
+
+@media (max-width: 732px){
+  .toggle{
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-start;
+    padding: .7em 1em;  }
+
+  .logo img{
+    width: 100px;
+  }
+
+  .main{
+    padding: 1em 1em;
+    justify-content: center;
+  }
+
+  #countrySearch{
+    font-size: 1em;
+  }
+
+  .countryList{
+    gap: .8em;
+    padding: .7em 1em;
+  }
+
+  .flagClass{
+    width: 200px;
+    height: 140px;
+  }
+  .cardText h1{
+    font-size: 1em;
+  }
+  .cardText p{
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 461px){
+  .flagClass{
+    width: 140px;
+    height: 100px;
+  }  
+  
+  .cardText h3{
+    font-size: .7em;
+  }
+  
+  .cardText p{
+    font-size: .5em;
+  }
+}

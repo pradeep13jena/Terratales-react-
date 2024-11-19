@@ -13,20 +13,21 @@ export default function CountryDetail() {
       .then(res => res.json())
       .then(([data]) => Setcname({
         name: data.name.common,
-        nativeName: Object.values(data.name.nativeName)[0].common,
+        nativeName: Object.values(data.name.nativeName)[0].common || 'nA',
         population: data.population,
         region: data.region,
-        subregion: data.subregion,
-        capital: data.capital,
+        subregion: data.subregion || 'nA',
+        capital: data.capital || 'nA',
         flag: data.flags.svg,
         tld: data.tld,
-        languages: Object.values(data.languages),
+        languages: Object.values(data.languages) || 'nA',
         currencies: Object.values(data.currencies)
             .map((currency) => currency.name)
-            .join(', ')
-      }))
+            .join(', ') || 'nA'
+      })
+    )
   }, [])
-
+  
   // Cname == null? console.log('none') : console.log(Cname.languages)
 
   return  Cname == null ? (<h3>Loading...</h3>) : (<div className="country-details-container">

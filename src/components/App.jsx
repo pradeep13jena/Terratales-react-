@@ -1,9 +1,6 @@
-import React from "react";
-import Header from "./Header";
-import Search from "./Search";
-import CountryList from "./CountryList";
-import mainLogo from "../assets/Terra.png";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Header from "./Header";;
+import mainLogo from "../assets/terra.png";
 import { Outlet } from "react-router-dom";
 import "./App.css";
 

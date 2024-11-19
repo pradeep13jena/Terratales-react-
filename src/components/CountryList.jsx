@@ -4,7 +4,6 @@ import CountryCard from './CountryCard'
 
 export default function CountriesList({query}) {
   const [datas, setDatas] = useState([])
-  
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())

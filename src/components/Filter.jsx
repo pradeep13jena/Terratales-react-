@@ -1,5 +1,4 @@
 import React from 'react'
-import data from '../utils/worldData'
 import Option from './option'
 
 export default function Filter() {
